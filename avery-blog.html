@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak Island Photographer · The Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="avery.css" />
+  </head>
+  <body>
+    <div class="brand-fixed">Oak Island Photographer</div>
+    <button
+      class="nav-toggle nav-mobile"
+      aria-expanded="false"
+      aria-controls="siteNav"
+    >
+      Menu
+    </button>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar__brand">Oak Island Photographer</div>
+          <nav id="siteNav" class="nav-desktop">
+            <a href="avery-home.html">Home</a>
+            <a href="avery-about.html">About</a>
+            <a class="active" href="avery-blog.html">Blog</a>
+            <a href="avery-investment.html">Investment</a>
+            <a href="avery-contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="sidebar__footer">
+          <div class="social">
+            <a href="#">f</a>
+            <a href="#">x</a>
+            <a href="#">ig</a>
+          </div>
+          <p>All content © 2025 Oak Island Photographer Demo</p>
+        </div>
+      </aside>
+      <main>
+        <header style="margin-bottom: 3rem">
+          <p class="post-meta">Journal</p>
+          <h1 class="section-heading">The Stories</h1>
+        </header>
+        <section class="blog-hero">
+          <div class="blog-card">
+          <picture>
+            <source srcset="images/webp/IMG00090.webp" type="image/webp" />
+            <img src="images/IMG00090.jpg" alt="Oak field wedding" loading="lazy" decoding="async" />
+          </picture>
+          </div>
+          <div class="blog-card">
+            <small>Destination, Wedding</small>
+            <h3>Kestrel Park Wedding — Cathy &amp; Logan</h3>
+            <p class="post-meta">July 23, 2019</p>
+            <p>
+              An intimate celebration under the sprawling oaks of Santa Ynez. A
+              day filled with gentle light, bespoke cocktails, and endlessly
+              elegant details.
+            </p>
+          </div>
+        </section>
+        <section class="pricing-grid" style="margin-top: 0">
+          <article class="blog-card">
+            <small>Engagement</small>
+          <picture>
+            <source srcset="images/webp/IMG00092.webp" type="image/webp" />
+            <img src="images/IMG00092.jpg" alt="Beach engagement" loading="lazy" decoding="async" />
+          </picture>
+            <h3>Cannon Beach — Katie &amp; John</h3>
+            <p>Wind-tossed hair, barefoot laughter, and cinematic dunes.</p>
+          </article>
+          <article class="blog-card">
+            <small>Fashion</small>
+          <picture>
+            <source srcset="images/webp/IMG00094.webp" type="image/webp" />
+            <img src="images/IMG00094.jpg" alt="Editorial portrait" loading="lazy" decoding="async" />
+          </picture>
+            <h3>Editorial retreat in the desert</h3>
+            <p>Warm terracotta light and textured linens at an artisan riad.</p>
+          </article>
+          <article class="blog-card">
+            <small>Wedding</small>
+          <picture>
+            <source srcset="images/webp/IMG00096.webp" type="image/webp" />
+            <img src="images/IMG00096.jpg" alt="Classic vows" loading="lazy" decoding="async" />
+          </picture>
+            <h3>City vows in Lisbon</h3>
+            <p>Marble courtyards, live fado, and a rooftop champagne hour.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const navLinks = sidebar?.querySelectorAll("a");
+      const toggleSidebar = () => {
+        const isOpen = sidebar.classList.toggle("sidebar--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      };
+      toggle?.addEventListener("click", toggleSidebar);
+      navLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (sidebar.classList.contains("sidebar--open")) {
+            toggleSidebar();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak Island Photographer · About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="avery.css" />
+  </head>
+  <body>
+    <div class="brand-fixed">Oak Island Photographer</div>
+    <button
+      class="nav-toggle nav-mobile"
+      aria-expanded="false"
+      aria-controls="siteNav"
+    >
+      Menu
+    </button>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar__brand">Oak Island Photographer</div>
+          <nav id="siteNav" class="nav-desktop">
+            <a href="avery-home.html">Home</a>
+            <a class="active" href="avery-about.html">About</a>
+            <a href="avery-blog.html">Blog</a>
+            <a href="avery-investment.html">Investment</a>
+            <a href="avery-contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="sidebar__footer">
+          <div class="social">
+            <a href="#">f</a>
+            <a href="#">x</a>
+            <a href="#">ig</a>
+          </div>
+          <p>All content © 2025 Oak Island Photographer Demo</p>
+        </div>
+      </aside>
+      <main>
+        <section class="stacked-gallery">
+          <picture>
+            <source srcset="images/webp/IMG00030.webp" type="image/webp" />
+            <img src="images/IMG00030.jpg" alt="Photographer at work" loading="lazy" decoding="async" />
+          </picture>
+          <div>
+            <p class="post-meta">Meet Glenn Guiao</p>
+            <h1 class="section-heading">Family-first stories with honest light.</h1>
+            <p class="lede">
+              I blend gentle direction with an editorial eye so your family can stay relaxed
+              while I frame the in-between looks, salty air, and soft hands being held.
+              Simple, luminous photographs that feel like you.
+            </p>
+            <ul class="about-highlights">
+              <li><span class="label">Based</span>Oak Island, traveling the Carolina coast</li>
+              <li><span class="label">Approach</span>Film-inspired tones, easy guidance, real connection</li>
+              <li><span class="label">Favorite moments</span>Sunrise snuggles, windblown dresses, cousins laughing</li>
+            </ul>
+            <div class="about-cta">
+              <a class="cta-link" href="avery-contact.html">Book your session</a>
+              <a class="cta-link" href="avery-home.html">View portfolio</a>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>
+              Your people matter most. I create space for kids to explore, for grandparents
+              to settle in, and for you to breathe. We keep sessions unrushed, anchored in
+              flattering light and locations that feel like home.
+            </p>
+            <p>
+              From wardrobe ideas to wall art, I guide you through every step so the final
+              images live beautifully in your home. Heirloom albums, matted frames, and
+              gallery installs are handled with the same care as the photographs themselves.
+            </p>
+            <blockquote class="client-praise">
+              “She calmed our wild crew, found gorgeous light, and delivered photographs that
+              feel soft and true. We finally see our family the way it feels.”
+              <cite>— The Reynolds Family</cite>
+            </blockquote>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const navLinks = sidebar?.querySelectorAll("a");
+      const toggleSidebar = () => {
+        const isOpen = sidebar.classList.toggle("sidebar--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      };
+      toggle?.addEventListener("click", toggleSidebar);
+      navLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (sidebar.classList.contains("sidebar--open")) {
+            toggleSidebar();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

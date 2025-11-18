@@ -1,0 +1,19 @@
+{
+  "name": "oak-island-family-photographer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webp": "node scripts/convert-webp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gsap": "^3.13.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

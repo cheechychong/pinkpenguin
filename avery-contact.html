@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak Island Photographer · Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="avery.css" />
+  </head>
+  <body>
+    <div class="brand-fixed">Oak Island Photographer</div>
+    <button
+      class="nav-toggle nav-mobile"
+      aria-expanded="false"
+      aria-controls="siteNav"
+    >
+      Menu
+    </button>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar__brand">Oak Island Photographer</div>
+          <nav id="siteNav" class="nav-desktop">
+            <a href="avery-home.html">Home</a>
+            <a href="avery-about.html">About</a>
+            <a href="avery-blog.html">Blog</a>
+            <a href="avery-investment.html">Investment</a>
+            <a class="active" href="avery-contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="sidebar__footer">
+          <div class="social">
+            <a href="#">f</a>
+            <a href="#">x</a>
+            <a href="#">ig</a>
+          </div>
+          <p>All content © 2025 Oak Island Photographer Demo</p>
+        </div>
+      </aside>
+      <main>
+        <section class="stacked-gallery" style="margin-bottom: 3rem">
+          <picture>
+            <source srcset="images/webp/IMG00028.webp" type="image/webp" />
+            <img
+              src="images/IMG00028.jpg"
+              alt="Couple holding hands"
+              loading="lazy"
+              decoding="async"
+              style="height: 360px; object-fit: cover"
+            />
+          </picture>
+          <div>
+            <p class="post-meta">Based in North Carolina · Traveling Worldwide</p>
+            <h1 class="section-heading">Let's start your journey</h1>
+            <p class="lede">
+              Share as much as you can about your celebration. From locations to
+              mood boards—every detail helps craft imagery that feels yours.
+            </p>
+          </div>
+        </section>
+
+        <form class="contact-form">
+          <label for="name">Your Name *</label>
+          <input id="name" name="name" type="text" placeholder="Firstname Lastname" />
+
+          <label for="email">Email Address *</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" />
+
+          <label>What type of session are you looking for?</label>
+          <div style="display: grid; gap: 0.8rem; margin-top: -0.5rem">
+            <label><input type="radio" name="session" /> Wedding</label>
+            <label><input type="radio" name="session" /> Engagement</label>
+            <label><input type="radio" name="session" /> Fashion</label>
+            <label><input type="radio" name="session" /> Casual</label>
+          </div>
+
+          <label for="hear">How did you hear about me?</label>
+          <select id="hear" name="hear">
+            <option>Select option</option>
+            <option>Planner referral</option>
+            <option>Friend</option>
+            <option>Instagram</option>
+            <option>Other</option>
+          </select>
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell me about your story"></textarea>
+
+          <button type="submit">Send Inquiry</button>
+        </form>
+      </main>
+    </div>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const navLinks = sidebar?.querySelectorAll("a");
+      const toggleSidebar = () => {
+        const isOpen = sidebar.classList.toggle("sidebar--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      };
+      toggle?.addEventListener("click", toggleSidebar);
+      navLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (sidebar.classList.contains("sidebar--open")) {
+            toggleSidebar();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak Island Photographer · Kestrel Park Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="avery.css" />
+  </head>
+  <body>
+    <div class="brand-fixed">Oak Island Photographer</div>
+    <button
+      class="nav-toggle nav-mobile"
+      aria-expanded="false"
+      aria-controls="siteNav"
+    >
+      Menu
+    </button>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar__brand">Oak Island Photographer</div>
+          <nav id="siteNav" class="nav-desktop">
+            <a href="avery-home.html">Home</a>
+            <a href="avery-about.html">About</a>
+            <a class="active" href="avery-blog.html">Blog</a>
+            <a href="avery-investment.html">Investment</a>
+            <a href="avery-contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="sidebar__footer">
+          <div class="social">
+            <a href="#">f</a>
+            <a href="#">x</a>
+            <a href="#">ig</a>
+          </div>
+          <p>All content © 2025 Oak Island Photographer Demo</p>
+        </div>
+      </aside>
+      <main>
+        <article class="stacked-gallery">
+          <picture>
+            <source srcset="images/webp/IMG00080.webp" type="image/webp" />
+            <img src="images/IMG00080.jpg" alt="Couple beneath tree" loading="lazy" decoding="async" />
+          </picture>
+          <div>
+            <p class="post-meta">July 23, 2019 · Destination, Wedding</p>
+            <h1 class="section-heading">Kestrel Park Wedding — Cathy &amp; Logan</h1>
+          </div>
+          <div class="post-body">
+            <p>
+              Santa Ynez greeted us with a golden mist that wrapped every hill in
+              painterly light. Cathy and Logan spent the morning reading letters
+              with their families, surrounded by loose blooms, citrus, and classic
+              stationery.
+            </p>
+            <p>
+              The vows took place under a centuries-old oak where guests were
+              welcomed with lavender lemonade. As the sun dipped, a live jazz trio
+              led everyone to the dinner terrace for a five-course feast served
+              under countless taper candles.
+            </p>
+            <p>
+              After their first dance, the couple slipped away for ten minutes of
+              portraits on the hillside—our favorite frames from the day. Enjoy a
+              selection below.
+            </p>
+          </div>
+          <div class="gallery-mosaic">
+            <picture>
+              <source srcset="images/webp/IMG00082.webp" type="image/webp" />
+              <img src="images/IMG00082.jpg" alt="Couple embrace" loading="lazy" decoding="async" />
+            </picture>
+            <picture>
+              <source srcset="images/webp/IMG00084.webp" type="image/webp" />
+              <img src="images/IMG00084.jpg" alt="Bride on rock" loading="lazy" decoding="async" />
+            </picture>
+            <picture>
+              <source srcset="images/webp/IMG00086.webp" type="image/webp" />
+              <img src="images/IMG00086.jpg" alt="Couple seated together" loading="lazy" decoding="async" />
+            </picture>
+            <picture>
+              <source srcset="images/webp/IMG00088.webp" type="image/webp" />
+              <img src="images/IMG00088.jpg" alt="Holding hands" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const navLinks = sidebar?.querySelectorAll("a");
+      const toggleSidebar = () => {
+        const isOpen = sidebar.classList.toggle("sidebar--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      };
+      toggle?.addEventListener("click", toggleSidebar);
+      navLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (sidebar.classList.contains("sidebar--open")) {
+            toggleSidebar();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

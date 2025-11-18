@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak Island Photographer · Fine Art Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/system.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="avery.css" />
+  </head>
+  <body>
+    <button
+      class="nav-toggle nav-mobile"
+      aria-expanded="false"
+      aria-controls="siteNav"
+    >
+      Menu
+    </button>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar__brand">Oak Island Photographer</div>
+          <nav id="siteNav" class="nav-desktop">
+            <a class="active" href="avery-home.html">Home</a>
+            <a href="avery-about.html">About</a>
+            <a href="avery-blog.html">Blog</a>
+            <a href="avery-investment.html">Investment</a>
+            <a href="avery-contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="sidebar__footer">
+          <div class="social">
+            <a href="#">f</a>
+            <a href="#">x</a>
+            <a href="#">ig</a>
+          </div>
+          <h1>Oak Island Family Photographer</h1>
+        </div>
+      </aside>
+      <main>
+        <section class="masonry-section solo">
+          <header class="masonry-header">
+          </header>
+          <div id="masonryGallery" class="masonry-grid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/design-rules.js"></script>
+    <script type="module">
+      import Masonry from "./js/masonry.js";
+
+      const items = [
+        { id: "1", img: "images/IMG00012.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 360 },
+        { id: "2", img: "images/IMG00018.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 420 },
+        { id: "3", img: "images/IMG00021.jpg", url: "avery-article.html", alt: "Oak Island family photography sample", height: 520 },
+        { id: "4", img: "images/IMG00028.jpg", url: "avery-investment.html", alt: "Oak Island family photography sample", height: 340 },
+        { id: "5", img: "images/IMG00030.jpg", url: "avery-blog.html", alt: "Oak Island family photography sample", height: 480 },
+        { id: "6", img: "images/IMG00033.jpg", url: "avery-contact.html", alt: "Oak Island family photography sample", height: 300 },
+        { id: "7", img: "images/IMG00036.jpg", url: "avery-portfolio-fashion.html", alt: "Oak Island family photography sample", height: 560 },
+        { id: "8", img: "images/IMG00040.jpg", url: "avery-portfolio-travel.html", alt: "Oak Island family photography sample", height: 360 },
+        { id: "9", img: "images/IMG00048.jpg", url: "avery-portfolio-travel.html", alt: "Oak Island family photography sample", height: 440 },
+        { id: "10", img: "images/IMG00055.jpg", url: "avery-portfolio-fashion.html", alt: "Oak Island family photography sample", height: 380 },
+        { id: "11", img: "images/IMG00060.jpg", url: "avery-about.html", alt: "Oak Island family photography sample", height: 520 },
+        { id: "12", img: "images/IMG00064.jpg", url: "avery-contact.html", alt: "Oak Island family photography sample", height: 320 },
+        { id: "13", img: "images/IMG00070.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 460 },
+        { id: "14", img: "images/IMG00075.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 340 },
+        { id: "15", img: "images/IMG00082.jpg", url: "avery-article.html", alt: "Oak Island family photography sample", height: 500 },
+        { id: "16", img: "images/IMG00088.jpg", url: "avery-investment.html", alt: "Oak Island family photography sample", height: 360 },
+        { id: "17", img: "images/IMG00094.jpg", url: "avery-blog.html", alt: "Oak Island family photography sample", height: 420 },
+        { id: "18", img: "images/IMG00102.jpg", url: "avery-portfolio-fashion.html", alt: "Oak Island family photography sample", height: 400 },
+        { id: "19", img: "images/IMG00110.jpg", url: "avery-portfolio-travel.html", alt: "Oak Island family photography sample", height: 340 },
+        { id: "20", img: "images/IMG00118.jpg", url: "avery-about.html", alt: "Oak Island family photography sample", height: 560 },
+        { id: "21", img: "images/IMG00022.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 380 },
+        { id: "22", img: "images/IMG00027.jpg", url: "avery-article.html", alt: "Oak Island family photography sample", height: 420 },
+        { id: "23", img: "images/IMG00031.jpg", url: "avery-investment.html", alt: "Oak Island family photography sample", height: 360 },
+        { id: "24", img: "images/IMG00038.jpg", url: "avery-blog.html", alt: "Oak Island family photography sample", height: 500 },
+        { id: "25", img: "images/IMG00044.jpg", url: "avery-contact.html", alt: "Oak Island family photography sample", height: 320 },
+        { id: "26", img: "images/IMG00052.jpg", url: "avery-portfolio-fashion.html", alt: "Oak Island family photography sample", height: 400 },
+        { id: "27", img: "images/IMG00066.jpg", url: "avery-portfolio-travel.html", alt: "Oak Island family photography sample", height: 360 },
+        { id: "28", img: "images/IMG00073.jpg", url: "avery-portfolio.html", alt: "Oak Island family photography sample", height: 450 },
+        { id: "29", img: "images/IMG00090.jpg", url: "avery-article.html", alt: "Oak Island family photography sample", height: 480 },
+        { id: "30", img: "images/IMG00105.jpg", url: "avery-about.html", alt: "Oak Island family photography sample", height: 340 },
+      ];
+
+      const masonry = new Masonry(document.getElementById("masonryGallery"), {
+        items,
+        ease: "power3.out",
+        duration: 0.6,
+        stagger: 0.05,
+        animateFrom: "bottom",
+        scaleOnHover: true,
+        hoverScale: 0.95,
+        blurToFocus: false,
+        colorShiftOnHover: false,
+      });
+
+      masonry.init();
+
+      const toggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const toggleSidebar = () => {
+        const isOpen = sidebar.classList.toggle("sidebar--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      };
+
+      toggle.addEventListener("click", toggleSidebar);
+
+      sidebar.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (sidebar.classList.contains("sidebar--open")) {
+            toggleSidebar();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
